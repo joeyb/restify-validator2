@@ -1,0 +1,32 @@
+{
+  "name": "restify-validator2",
+  "description": "Restify middleware built on top of the validator package.",
+  "keywords": [
+    "restify",
+    "validator",
+    "validation",
+    "validate"
+  ],
+  "author": "Joey Bratton <joey@joeyb.org>",
+  "version": "0.0.1",
+  "homepage": "https://github.com/joeyb/restify-validator2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joeyb/restify-validator2.git"
+  },
+  "main": "./lib/restifyValidator.js",
+  "scripts": {
+    "build": "coffee --bare --compile --output lib/ src/*.coffee",
+    "prepublish": "coffee --bare --compile --output lib/ src/*.coffee",
+    "postpublish": "rm -rf lib"
+  },
+  "dependencies": {
+    "validator": "~1.5.1"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
