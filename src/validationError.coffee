@@ -12,3 +12,5 @@ ValidationError = (errors) ->
   })
 
 util.inherits(ValidationError, restify.HttpError)
+
+module.exports = ValidationError
