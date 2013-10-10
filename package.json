@@ -8,7 +8,7 @@
     "validate"
   ],
   "author": "Joey Bratton <joey@joeyb.org>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/joeyb/restify-validator2",
   "repository": {
     "type": "git",
@@ -16,12 +16,13 @@
   },
   "main": "./lib/restifyValidator.js",
   "scripts": {
-    "build": "coffee --bare --compile --output lib/ src/*.coffee",
-    "prepublish": "coffee --bare --compile --output lib/ src/*.coffee",
+    "build": "./node_modules/coffee-script/bin/coffee --bare --compile --output lib/ src/*.coffee",
+    "prepublish": "./node_modules/coffee-script/bin/coffee --bare --compile --output lib/ src/*.coffee",
     "postpublish": "rm -rf lib"
   },
   "dependencies": {
-    "validator": "~1.5.1"
+    "validator": "~1.5.1",
+    "restify": "~2.6.0"
   },
   "devDependencies": {
     "coffee-script": "~1.6.3"
