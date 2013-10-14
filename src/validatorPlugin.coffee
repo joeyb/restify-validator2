@@ -24,6 +24,6 @@ module.exports = (req, res, next) ->
 
   req.getValidatorErrorResponse = () ->
     errors = req.getValidatorErrors()
-    return if errors then new ValidatorError(errors) else null
+    return if errors?.length then new ValidatorError(errors) else null
 
   return next()
