@@ -21,7 +21,9 @@
     "postpublish": "rm -rf lib"
   },
   "dependencies": {
-    "validator": ">=1.5.1",
+    "validator": ">=1.5.1"
+  },
+  "peerDependencies": {
     "restify": ">=2.6.0"
   },
   "devDependencies": {
