@@ -14,3 +14,4 @@ ValidatorError = (errors) ->
 util.inherits(ValidatorError, restify.HttpError)
 
 module.exports = ValidatorError
+
