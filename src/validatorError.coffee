@@ -1,16 +1,16 @@
-restify = require('restify')
-util = require('util')
+RestError = (require 'restify').RestError
 
-ValidatorError = (errors) ->
-  restify.HttpError.call(this, {
-    constructorOpt: ValidatorError
-    statusCode: 400
-    body: {
-      code: 'ValidatorError'
-      errors: errors
-    }
-  })
+class ValidatorError extends RestError
+    constructor: (errors) ->
+        super
+            restCode: 'ValidatorError'
+            statusCode: 400
+            body:
+              code: 'ValidatorError'
+              errors: errors
+            constructorOpt: ValidatorError
 
-util.inherits(ValidatorError, restify.HttpError)
+        @name = 'ValidatorError'
+
 
 module.exports = ValidatorError
