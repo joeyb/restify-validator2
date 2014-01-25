@@ -1,7 +1,7 @@
 RestError = (require 'restify').RestError
 
 class ValidatorError extends RestError
-    constructor: (error) ->
+    constructor: (errors) ->
         super
             restCode: 'ValidatorError'
             statusCode: 400
